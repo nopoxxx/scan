@@ -1,6 +1,6 @@
 // @ts-ignore
-import classes from "./DocumentCard.module.css";
 import { formatDate } from "../../modules/histogramsSorter";
+import classes from "./DocumentCard.module.css";
 
 export default function DocumentCard(props: any) {
   const formatContent = (xmlContent: string) => {
