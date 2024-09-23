@@ -3,13 +3,11 @@ import classes from "./DocumentCard.module.css";
 import { formatDate } from "../../modules/histogramsSorter";
 
 export default function DocumentCard(props: any) {
-  // Функция для очистки и преобразования XML в HTML
   const formatContent = (xmlContent: string) => {
-    // Заменяем специальные символы вроде &lt; и &gt;
     const cleanContent = xmlContent
       .replace(/&lt;/g, "<")
       .replace(/&gt;/g, ">")
-      .replace(/<\/?p>/g, ""); // Убираем лишние <p> теги, если нужно
+      .replace(/<\/?p>/g, "");
 
     return cleanContent;
   };

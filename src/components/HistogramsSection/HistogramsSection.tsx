@@ -1,22 +1,22 @@
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
-import React, { useEffect, useRef, useState } from "react";
 // @ts-ignore
-import classes from "./HistogramsSection.module.css";
-import { searchData } from "../SearchForm/SearchForm";
+import { useNavigate } from "react-router-dom";
 import { histogramsSorter } from "../../modules/histogramsSorter";
 import HistogramCell from "../HistogramCell/HistogramCell";
-import { useNavigate } from "react-router-dom";
+import { searchData } from "../SearchForm/SearchForm";
+import classes from "./HistogramsSection.module.css";
 
 export default function HistogramsSection() {
   // @ts-ignore
-  let sliderRef = useRef<Slider | null>(null); // Указываем тип для слайдера
+  let sliderRef = useRef<Slider | null>(null);
 
   const next = () => {
-    sliderRef.current?.slickNext(); // Используем ?. чтобы безопасно вызывать методы
+    sliderRef.current?.slickNext();
   };
 
   const previous = () => {
-    sliderRef.current?.slickPrev(); // Используем ?. чтобы безопасно вызывать методы
+    sliderRef.current?.slickPrev();
   };
 
   const settings = {
@@ -44,7 +44,7 @@ export default function HistogramsSection() {
         },
         body: JSON.stringify(searchData),
         credentials: "omit",
-      },
+      }
     )
       .then(async (r) => {
         const histogramsJson = await r.json();

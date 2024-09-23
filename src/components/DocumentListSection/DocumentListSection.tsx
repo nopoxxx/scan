@@ -1,11 +1,9 @@
-//@ts-ignore
-import classes from "./DocumentListSection.module.css";
-import { searchData } from "../SearchForm/SearchForm";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DocumentCard from "../DocumentCard/DocumentCard";
-
-// Описываем тип для документа
+import { searchData } from "../SearchForm/SearchForm";
+// @ts-ignore
+import classes from "./DocumentListSection.module.css";
 interface Document {
   ok: {
     issueDate: string;
@@ -24,10 +22,10 @@ interface Document {
 
 export default function DocumentListSection() {
   const [results, setResults] = useState<string[]>([]);
-  const [documents, setDocuments] = useState<Document[]>([]); // Определяем массив документов с нужным типом
-  const [currentPage, setCurrentPage] = useState(1); // Текущая страница (набор данных)
+  const [documents, setDocuments] = useState<Document[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
-  const itemsPerPage = 10; // Количество элементов на странице
+  const itemsPerPage = 10;
   let searchResults: any;
   const navigate = useNavigate();
 
@@ -55,7 +53,7 @@ export default function DocumentListSection() {
     );
     const rJson = await result.json();
     searchResults = getEncodedIds(rJson.items);
-    setResults(searchResults); // Сохраняем все результаты
+    setResults(searchResults);
   }
 
   async function getDocuments(ids: string[]): Promise<Document[]> {
@@ -77,7 +75,7 @@ export default function DocumentListSection() {
 
   useEffect(() => {
     if (results.length > 0) {
-      loadMoreDocuments(); // Загружаем первые 10 документов при наличии результатов
+      loadMoreDocuments();
     }
   }, [results]);
 
@@ -98,10 +96,10 @@ export default function DocumentListSection() {
     const nextIds = results.slice(
       (currentPage - 1) * itemsPerPage,
       currentPage * itemsPerPage,
-    ); // Выбираем следующие 10 элементов
+    );
     const newDocuments = await getDocuments(nextIds);
-    setDocuments((prevDocuments) => [...prevDocuments, ...newDocuments]); // Добавляем новые документы к существующим
-    setCurrentPage(currentPage + 1); // Увеличиваем номер страницы
+    setDocuments((prevDocuments) => [...prevDocuments, ...newDocuments]);
+    setCurrentPage(currentPage + 1);
     setLoading(false);
     console.log("start");
   };
