@@ -1,0 +1,29 @@
+.list{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 38px;
+    margin-bottom: 38px;
+}
+
+.title {
+    font-family: Ferry, sans-serif;
+    font-size: 30px;
+    margin-bottom: 58px;
+}
+
+.button{
+    background: #5970FF;
+    padding: 16px 50px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 125px;
+    justify-self: center;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center;
+}

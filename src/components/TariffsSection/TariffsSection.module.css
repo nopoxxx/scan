@@ -1,0 +1,14 @@
+.title {
+    font-family: Ferry;
+    font-weight: 900;
+    font-size: 60px;
+    margin: 0;
+}
+
+.list {
+    margin-top: 70px;
+    margin-bottom: 117px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

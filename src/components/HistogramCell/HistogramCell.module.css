@@ -1,0 +1,6 @@
+.cell {
+    text-align: center;
+    border-right: #949494 solid 2px;
+    width: 120px;
+    font-size: 18px;
+}

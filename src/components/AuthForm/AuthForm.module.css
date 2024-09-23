@@ -1,0 +1,98 @@
+.authForm {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    width: 420px;
+    height: 540px;
+    margin-top: 55px;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.type {
+    display: flex;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.typeSignIn {
+    color: #029491;
+    width: 150px;
+    padding: 8px;
+    border-bottom: #029491 2px solid;
+}
+
+.typeSignUp {
+    width: 210px;
+    padding: 8px;
+    color: #000000;
+    border-bottom: #000000 2px solid;
+    opacity: 20%;
+}
+
+.input {
+    width: 100%;
+    height: 43px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 16px;
+}
+
+.form {
+    font-size: 16px;
+    opacity: 50%;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.submit {
+    width: 100%;
+    height: 60px;
+    border: 0;
+    background-color: #5970ff;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 500px;
+    color: #ffffff;
+    opacity: 80%;
+    transition: 0.5s ease;
+}
+
+.error {
+    color: red;
+    margin: 5px 0;
+}
+
+.submit:hover {
+    opacity: 100%;
+    transition: 0.5s ease;
+}
+
+.submit:disabled {
+    opacity: 40%;
+    cursor: default;
+    transition: 0.5s ease;
+}
+
+.forgot {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login_via__title {
+    font-size: 16px;
+    opacity: 50%;
+}
+
+.login_via__list {
+    display: flex;
+    align-items: center;
+}

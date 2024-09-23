@@ -1,0 +1,11 @@
+.sliderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1400px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+}

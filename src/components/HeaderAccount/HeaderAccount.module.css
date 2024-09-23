@@ -1,0 +1,49 @@
+.sign_up {
+    color: #000000;
+    opacity: 40%;
+    text-decoration: none;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+}
+
+.separation {
+    width: 2px;
+    height: 26px;
+    background: #029491;
+    opacity: 60%;
+    margin: 0 18px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.sign_in {
+    background-color: #7ce3e1;
+    border-radius: 15px;
+    border: 0;
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+}
+
+.text {
+    text-align: right;
+}
+
+.logout {
+    font-size: 10px;
+    opacity: 40%;
+    color: black;
+    text-decoration: none;
+}
+
+.avatar {
+    margin-left: 4px;
+    border-radius: 50%;
+}
+
+.username {
+    margin: 0;
+}

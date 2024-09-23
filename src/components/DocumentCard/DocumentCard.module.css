@@ -1,0 +1,77 @@
+.card {
+    padding: 20px 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top {
+    display: flex;
+    color: #949494;
+    font-size: 16px;
+}
+
+.sourceName {
+    margin-left: 14px;
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+}
+
+.tech{
+    margin-right: 10px;
+    padding: 4px 14px;
+    background: #FFB64F;
+    border-radius: 5px;
+}
+
+.announs{
+    margin-right: 10px;
+    padding: 4px 14px;
+    background: #5970FF;
+    border-radius: 5px;
+}
+
+.digest{
+    margin-right: 10px;
+    padding: 4px 14px;
+    background:#7CE3E1;
+    border-radius: 5px;
+}
+
+.content{
+    font-size: 16px;
+    opacity: 50%;
+    margin-bottom: 20px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    background: #7CE3E1;
+    padding: 14px 30px;
+    font-size: 16px;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.wordCount {
+    font-size: 16px;
+    color: #949494;
+}
